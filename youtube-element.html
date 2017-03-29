@@ -1,0 +1,41 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<!-- <link rel="import" href=""> -->
+<!--
+`youtube-element`
+This is a independent version of youtube&#39;s element
+
+@demo demo/index.html
+-->
+
+<dom-module id="youtube-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+    <youtube-toolbar>
+      <!-- The youtube-search has a app-route that consumes the tail of
+      another route (`searchTail`) -->
+      <youtube-search
+          video-data="{{videoData}}">
+      </youtube-search>
+    </youtube-toolbar>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'youtube-element',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'youtube-element',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
