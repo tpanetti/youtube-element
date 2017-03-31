@@ -36,9 +36,7 @@ This is a independent version of youtube&#39;s element
         transition: transform 0.3s;
       }
     </style>
-    
-    <url-bar></url-bar>
-    <app-router-demo></app-router-demo>
+
 
     <!-- app-location binds with the URL and produces a route for
     app-route elements to consume. Since this demo needs to run without
@@ -52,7 +50,7 @@ This is a independent version of youtube&#39;s element
     passed to the `route` property of downstream app-routes. -->
     <app-route route="{{route}}" pattern="/:page" data="{{data}}"></app-route>
     <app-route route="{{route}}" pattern="/search" tail="{{searchTail}}"></app-route>
-    <app-route route="{{route}}" pattern="/video" tail="{{videoTail}}"     active="{{videoPageActive}}"></app-route>
+    <app-route route="{{route}}" pattern="/video" tail="{{videoTail}}" active="{{videoPageActive}}"></app-route>
 
     <youtube-toolbar collapsed$="{{videoPageActive}}">
       <!-- The youtube-search has a app-route that consumes the tail of
@@ -76,7 +74,7 @@ This is a independent version of youtube&#39;s element
   <script>
     window.addEventListener('WebComponentsReady', function() {
       Polymer({
-        is: 'app-router-demo',
+        is: 'youtube-element',
 
         properties: {
           route: {
