@@ -33,7 +33,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       paper-input {
         width: 100px;
       }
-
+      paper-card {
+        width: 10%
+      }
       #controls {
         color: #fff;
         @apply(--layout-vertical);
@@ -73,6 +75,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         current-time="{{queryParams.time}}"
         start-time="{{queryParams.time}}">
     </youtube-lite>
+<!--
+    <div id="controls">
+      <div>
+        <paper-input
+            id="time"
+            type="number"
+            on-focus="pause"
+            label="Time"
+            value="{{queryParams.time}}">
+        </paper-input>
+        <paper-toggle-button id="state" active="{{playing}}">[[queryParams.state]]</paper-toggle-button>
+      </div>
+      <route-info route="[[route]]"></route-info>
+    </div>
+-->
   </template>
 
   <script>
